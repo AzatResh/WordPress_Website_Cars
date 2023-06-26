@@ -94,7 +94,11 @@ function gn_enqueue_scripts(){
 	wp_enqueue_style('genius-bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('genius-style', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');
 
+	wp_enqueue_style('genius-fonts', gn_fonts_url(), array(), '1.0');
 
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 
 	// wp_localize_script(
 	// 	'genius-ajax',
@@ -106,12 +110,22 @@ function gn_enqueue_scripts(){
 	// 		'string_new'=> esc_html__('Hello world', 'genius'),
 	// 	)
 	// );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action('wp_enqueue_scripts', 'gn_enqueue_scripts');
+
+function gn_fonts_url(){
+	$fonts_url = "";
+
+	$families = array();
+	$families[] = 'Oswald:wght@400;500;600;700';
+	$families[] = 'Rubik';
+
+	$query_args = array(
+		'family' => urlencode(implode("|", $families)),
+	);
+	$fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
+	return esc_url_raw($fonts_url);
+}
 
 function genius_ajax_example(){
 
@@ -148,6 +162,7 @@ add_action('wp_ajax_nopriv_genius_ajax_example', 'genius_ajax_example');
 function gn_show_meta(){
 	echo "<meta name='author' content=CRIK0VA''>";
 }
+
 add_action('wp_head', 'gn_show_meta');
 
 // function gn_body_class($classes){

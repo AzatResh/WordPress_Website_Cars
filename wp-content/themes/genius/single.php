@@ -5,7 +5,8 @@
 
 get_header();
 ?>
-	<main id="primary" class="site-main">
+	<div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -24,7 +25,8 @@ get_header();
 		endwhile;
 
 		?>
-	</main>
+		</div>
+	</div>
 <?php
 //get_sidebar();
 get_footer();

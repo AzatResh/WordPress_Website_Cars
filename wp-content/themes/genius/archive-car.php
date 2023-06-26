@@ -1,33 +1,26 @@
 <?php
-/**
- * http://localhost/genius/car/
- */
+/* http://localhost/genius/car/ */
 
 get_header();
 ?>
-	<div>
-        The template for custom post type car
-		<header class="page-header">
+	<div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
 			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+			while ( have_posts() ) :
+				the_post();
+				
+				get_template_part('template-parts/content', 'car');
+
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; // End of the loop.
 			?>
-		</header>
-
-		<?php if(have_posts()) 
-			: while(have_posts()) 
-				: the_post(); ?>
-
-			<?php get_template_part('template-parts/content'); ?>
-
-		<?php endwhile; else :?>
-
-			<?php get_template_part('template-parts/content', 'none'); ?>
-
-		<?php endif ?> 
+			<div class="pagination">
+				<?php echo paginate_links(); ?>
+			</div>
+		</div>
 	</div>
-
-
 <?php
-//get_sidebar();
 get_footer();

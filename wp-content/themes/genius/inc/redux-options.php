@@ -345,6 +345,11 @@ Redux::set_section(
 				'default' 		   => ""
 			),
 			array(
+				'id'               => 'header_img',
+				'type'			   => 'media',
+				'title'            => esc_html__( 'Header image', 'redux-framework-demo' ),
+			),
+			array(
 				'id'               => 'email',
 				'type'			   => 'text',
 				'title'            => esc_html__( 'Company email', 'redux-framework-demo' ),
@@ -364,7 +369,7 @@ Redux::set_section(
 		'subsection'	   => true,
 		'desc'             => esc_html__( 'Social Settings Links', 'redux-framework-demo' ),
 		'customizer_width' => '450px',
-		'icon'             => 'el el-chevron-up',
+		'icon'             => 'el el-facebook',
 		'fields'		   => array(
 			array(
 				'id'               => 'fb',

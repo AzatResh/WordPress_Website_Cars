@@ -69,8 +69,8 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="text-uppercase text-primary mb-1">Royal Cars</h1>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand">
+                    <h1 class="text-uppercase text-primary mb-1"><?php echo esc_html(bloginfo('name')); ?> </h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -89,6 +89,25 @@
         </div>
     </div>
     <!-- Navbar End -->
+
+    <?php 
+        $bg_image = '';
+        if(!is_front_page()){
+            if(get_the_post_thumbnail_url(get_the_id(), 'full')){
+                $bg_image = 'style="background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url('. get_the_post_thumbnail_url(get_the_id(), 'full'). ') center / cover no-repeat"';
+            }
+            else if($genius_options['header_img']['url']){
+                $bg_image = 'style="background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url('. $genius_options['header_img']['url']. ') center / cover no-repeat"';
+            }
+            ?>
+            <div class="container-fluid page-header"<?php echo $bg_image; ?> >
+                <h1 class="display-3 text-uppercase text-white mb-3"><?php wp_title(""); ?></h1>
+            </div> <?php
+        }
+        else{
+
+        }
+    ?>
 
 <?php 
 

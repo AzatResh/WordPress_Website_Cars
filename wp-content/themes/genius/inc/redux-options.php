@@ -159,7 +159,7 @@ $args = array(
 
 	// Allows dynamic CSS to be generated for customizer and google fonts,
 	// but stops the dynamic CSS from going to the page head.
-	'output_tag'                => true,
+	'output_tag'                => false,
 
 	// Disable the footer credit of Redux. Please leave if you can help it.
 	'footer_credit'             => '',

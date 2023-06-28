@@ -28,8 +28,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function register_oembed_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/about-widget.php' );
+	require_once( __DIR__ . '/widgets/ads-widget.php' );
 
 	$widgets_manager->register( new \Elementor_About_Widget() );
+	$widgets_manager->register( new \Elementor_Ads_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'register_oembed_widget' );

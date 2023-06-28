@@ -9,9 +9,10 @@
 
 get_header();
 ?>
-
-	Nothing here
-
-	<br>
+	<div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+			<p> Nothing here. Try something else.</p>
+		</div>
+	</div>
 <?php
 get_footer();

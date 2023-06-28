@@ -88,13 +88,13 @@ function gn_enqueue_scripts(){
 	wp_enqueue_script('tempusdominus-bootstrap-4', get_template_directory_uri().'/assets/js/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('genius-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0', true);
 
+	wp_enqueue_style('genius-fonts', gn_fonts_url(), array(), '1.0');
+
 	wp_enqueue_style('genius-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('carousel-css', get_template_directory_uri().'/assets/js/lib/owlcarousel/assets/owl.carousel.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('genius-tempusdominus-bootstrap-css', get_template_directory_uri().'/assets/js/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('genius-bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('genius-style', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');
-
-	wp_enqueue_style('genius-fonts', gn_fonts_url(), array(), '1.0');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

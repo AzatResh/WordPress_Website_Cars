@@ -105,13 +105,7 @@
             </div> <?php
         }
         else{
-            if($genius_options['header_img']['url']){
-                $bg_image = 'style="background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url('. $genius_options['header_img']['url']. ') center / cover no-repeat"';
-            }
-            ?>
-            <div class="container-fluid page-header"<?php echo $bg_image; ?> >
-                <h1 class="display-3 text-uppercase text-white mb-3">Cars</h1>
-            </div> <?php
+            
         }
     ?>
 

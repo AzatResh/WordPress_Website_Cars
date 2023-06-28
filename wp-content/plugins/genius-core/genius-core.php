@@ -16,5 +16,6 @@ if(!function_exists('add_action')){
 
 require plugin_dir_path(__FILE__) . '/inc/widget-about.php';
 require plugin_dir_path(__FILE__) . '/inc/metaboxes.php';
-require plugin_dir_path(__FILE__) . '/inc/custom_post_type.php';
 require plugin_dir_path(__FILE__) . '/inc/acf.php';
+require plugin_dir_path(__FILE__) . '/inc/custom_post_type.php';
+require plugin_dir_path(__FILE__) . '/inc/elementor.php';

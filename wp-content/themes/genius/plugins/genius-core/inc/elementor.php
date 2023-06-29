@@ -29,9 +29,15 @@ function register_oembed_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/about-widget.php' );
 	require_once( __DIR__ . '/widgets/ads-widget.php' );
+	require_once( __DIR__ . '/widgets/slider-widget.php' );
+	require_once( __DIR__ . '/widgets/services-widget.php' );
+	require_once( __DIR__ . '/widgets/cars-widget.php' );
 
 	$widgets_manager->register( new \Elementor_About_Widget() );
 	$widgets_manager->register( new \Elementor_Ads_Widget() );
+	$widgets_manager->register( new \Elementor_Slider_Widget() );
+	$widgets_manager->register( new \Elementor_Services_Widget() );
+	$widgets_manager->register( new \Elementor_Cars_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'register_oembed_widget' );

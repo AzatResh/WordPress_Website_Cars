@@ -6,9 +6,9 @@ function gn_acf_metaboxes(){
         'title'=>'Car Settings for ACF from code',
         'fields'=> array(
             array(
-                'key'=> 'custom_price',
-                'label'=>'Car Price',
-                'name'=>'custom_price',
+                'key'=> 'custom_year',
+                'label'=>'Car Year',
+                'name'=>'custom_year',
                 'type'=>'text'
             ),
             array(
@@ -21,7 +21,19 @@ function gn_acf_metaboxes(){
                     'auto'=>esc_html__("Auto", 'genius')
                 ),
                 'allow_null'=>1
-            )
+            ),
+            array(
+                'key'=> 'custom_travel_km',
+                'label'=>'Car Travel km',
+                'name'=>'custom_travel_km',
+                'type'=>'text'
+            ),
+            array(
+                'key'=> 'custom_price',
+                'label'=>'Car Price',
+                'name'=>'custom_price',
+                'type'=>'text'
+            ),
         ),
         'location'=>array(
             array(

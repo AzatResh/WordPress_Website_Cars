@@ -93,7 +93,7 @@
     <?php 
         $bg_image = '';
         if(!is_front_page()){
-            if(get_the_post_thumbnail_url(get_the_id(), 'full')){
+            if(get_the_post_thumbnail_url(get_the_id(), 'full') and !is_single( $post )){
                 $bg_image = 'style="background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url('. get_the_post_thumbnail_url(get_the_id(), 'full'). ') center / cover no-repeat"';
             }
             else if($genius_options['header_img']['url']){
@@ -103,9 +103,6 @@
             <div class="container-fluid page-header"<?php echo $bg_image; ?> >
                 <h1 class="display-3 text-uppercase text-white mb-3"><?php wp_title(""); ?></h1>
             </div> <?php
-        }
-        else{
-            
         }
     ?>
 
@@ -129,7 +126,6 @@
 	
 	//get_search_form();
 ?>
-<br>
 <!-- 
 <button id='button_car'>Show All Cards</button>
 <div id='car_content' style="background: gray;"> </div> -->

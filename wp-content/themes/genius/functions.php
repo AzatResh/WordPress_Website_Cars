@@ -263,3 +263,12 @@ function genius_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'genius_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'genius_content_width', 0 );
+
+function gn_posts_per_page($query){
+	if(!is_admin()){
+		if(is_post_type_archive('car')){
+			$query->set('posts_per_page', 6);
+		}
+	}
+}
+add_action('pre_get_posts', 'gn_posts_per_page');

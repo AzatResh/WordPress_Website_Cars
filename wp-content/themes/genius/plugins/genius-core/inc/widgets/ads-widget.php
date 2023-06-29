@@ -104,29 +104,31 @@ class Elementor_Ads_Widget extends \Elementor\Widget_Base {
 		//echo ( $html ) ? $html : $settings['url'];
 		//echo '</div>';
 ?>
-	<div class="container py-5">
-        <div class="row mx-0">
-            <div class="col-lg-6 px-0">
-                <div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
-					<?php if($settings['genius_image_left']['url']) { ?><img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="<?php echo esc_url($settings['genius_image_left']['url']) ?>" alt=""> <?php } ?>
-                    <div class="text-right">
-                        <h3 class="text-uppercase text-light mb-3"><?php echo esc_html($settings['genius_title_left']); ?></h3>
-                        <p class="mb-4"><?php echo esc_html($settings['genius_description_left']); ?></p>
-                        <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 px-0">
-                <div class="px-5 bg-dark d-flex align-items-center justify-content-between" style="height: 350px;">
-                    <div class="text-left">
-                        <h3 class="text-uppercase text-light mb-3"><?php echo esc_html($settings['genius_title_right']);?></h3>
-                        <p class="mb-4"><?php echo esc_html($settings['genius_description_right']); ?></p>
-                        <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
-                    </div>
-                    <?php if($settings['genius_image_right']['url']) { ?><img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="<?php echo esc_url($settings['genius_image_right']['url']) ?>" alt=""> <?php } ?>
-                </div>
-            </div>
-        </div>
+	<div class="container-fluid py-5">
+		<div class="container py-5">
+			<div class="row mx-0">
+				<div class="col-lg-6 px-0">
+					<div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
+						<?php if($settings['genius_image_left']['url']) { ?><img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="<?php echo esc_url($settings['genius_image_left']['url']) ?>" alt=""> <?php } ?>
+						<div class="text-right">
+							<h3 class="text-uppercase text-light mb-3"><?php echo esc_html($settings['genius_title_left']); ?></h3>
+							<p class="mb-4"><?php echo esc_html($settings['genius_description_left']); ?></p>
+							<a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 px-0">
+					<div class="px-5 bg-dark d-flex align-items-center justify-content-between" style="height: 350px;">
+						<div class="text-left">
+							<h3 class="text-uppercase text-light mb-3"><?php echo esc_html($settings['genius_title_right']);?></h3>
+							<p class="mb-4"><?php echo esc_html($settings['genius_description_right']); ?></p>
+							<a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+						</div>
+						<?php if($settings['genius_image_right']['url']) { ?><img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="<?php echo esc_url($settings['genius_image_right']['url']) ?>" alt=""> <?php } ?>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 <?php
 	}

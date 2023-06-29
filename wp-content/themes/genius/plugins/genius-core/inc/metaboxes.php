@@ -1,11 +1,11 @@
 <?php
 
 function gn_add_metabox(){
-
+    
     add_meta_box("car-metabox", esc_html("Cars Settings", 'genius'), 'gn_cars_metabox', 'car', 'normal');
 
 }
-add_action('add_meta_boxes', 'gn_add_metabox');
+//add_action('add_meta_boxes', 'gn_add_metabox');
 
 function gn_cars_metabox($post){
 
@@ -65,4 +65,4 @@ function gn_save_metabox($post_id, $post){
 
     return $post_id;
 }
-add_action("save_post", "gn_save_metabox", 10, 2);
+//add_action("save_post", "gn_save_metabox", 10, 2);

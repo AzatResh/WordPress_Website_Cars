@@ -85,39 +85,44 @@ class Elementor_About_Widget extends \Elementor\Widget_Base {
 		//echo ( $html ) ? $html : $settings['url'];
 		//echo '</div>';
 ?>
-	<h1 class="display-4 text-uppercase text-center mb-5"> <?php echo esc_html($settings['genius_pre_title']) ?> <span class="text-primary"> <?php echo esc_html($settings['genius_title']) ?> </span></h1>
-	<div class="row justify-content-center">
-		<div class="col-lg-10 text-center">
-			<?php if($settings['genius_image']['url']) { ?><img class="w-75 mb-4" src="<?php echo esc_url($settings['genius_image']['url']) ?>" alt=""> <?php } ?>
-			<p><?php echo esc_html($settings['genius_description']) ?></p>
+	<div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+			<h1 class="display-4 text-uppercase text-center mb-5"> <?php echo esc_html($settings['genius_pre_title']) ?> <span class="text-primary"> <?php echo esc_html($settings['genius_title']) ?> </span></h1>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 text-center">
+					<?php if($settings['genius_image']['url']) { ?><img class="w-75 mb-4" src="<?php echo esc_url($settings['genius_image']['url']) ?>" alt=""> <?php } ?>
+					<p><?php echo esc_html($settings['genius_description']) ?></p>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-lg-4 mb-2">
+					<div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
+						<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+							<i class="fa fa-2x fa-headset text-secondary"></i>
+						</div>
+						<h4 class="text-uppercase m-0">24/7 Car Rental Support</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-2">
+					<div class="d-flex align-items-center bg-secondary p-4 mb-4" style="height: 150px;">
+						<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+							<i class="fa fa-2x fa-car text-secondary"></i>
+						</div>
+						<h4 class="text-light text-uppercase m-0">Car Reservation Anytime</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-2">
+					<div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
+						<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+							<i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
+						</div>
+						<h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row mt-3">
-		<div class="col-lg-4 mb-2">
-			<div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
-				<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-					<i class="fa fa-2x fa-headset text-secondary"></i>
-				</div>
-				<h4 class="text-uppercase m-0">24/7 Car Rental Support</h4>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-2">
-			<div class="d-flex align-items-center bg-secondary p-4 mb-4" style="height: 150px;">
-				<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-					<i class="fa fa-2x fa-car text-secondary"></i>
-				</div>
-				<h4 class="text-light text-uppercase m-0">Car Reservation Anytime</h4>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-2">
-			<div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
-				<div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-					<i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
-				</div>
-				<h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
-			</div>
-		</div>
-	</div>
+
 <?php
 	}
 
